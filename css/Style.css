@@ -1,0 +1,794 @@
+/* Reset and layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/bgimg7.avif');
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 187, 187);
+  padding: 0px 10px 0px 10px;
+  height: 95px;
+
+}
+
+.mainlogo img {
+  border-radius: 50%;
+  height: 280px;
+  margin-top: 220px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main-logo img {
+
+  border-radius: 50%;
+  height: 280px;
+  margin-top: 220px;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: rgb(249, 240, 217);
+}
+
+.nav-links a:hover {
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(10, 187, 187);
+  min-width: 160px;
+  z-index: 11;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Chief Guest Heading */
+.chief-guest-title {
+  text-align: center;
+  font-family: "Brush Script MT", cursive;
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #680505;
+}
+
+/* Hero Section and Guests 
+        .hero-section {
+            max-height: 100vh;
+            overflow-y: auto;
+            padding: 1rem 0;
+        }*/
+
+.guest-section {
+  /* background-image: url('bgimg7.avif'); replace with your desired image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 0;
+}
+
+
+.guest-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.guest-card {
+  position: relative;
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.guest-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.guest-photo {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  z-index: 2;
+}
+
+
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgb(10, 187, 187);
+  border-radius: 2.5rem;
+  margin: 0.5rem;
+  color: #000;
+
+}
+
+.fb {
+  color: rgb(42, 42, 130);
+}
+
+.ins {
+  color: rgb(224, 9, 153);
+}
+
+.yt {
+  color: rgb(221, 3, 3);
+}
+
+.contact-details,
+.other-links,
+.viewer {
+  flex: 1;
+  min-width: 250px;
+  font-family: 'Arial', sans-serif;
+  /* Change this to your preferred font */
+
+}
+
+#contact {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contact-details a {
+  text-decoration: none;
+
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: white;
+}
+
+.contact-details i {
+  font-size: 1.2rem;
+}
+
+.other-links h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1.4rem;
+}
+
+.other-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.other-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.other-links ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+
+}
+
+.other-links ul li a:hover {
+  color: white;
+}
+
+.viewer p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.viewer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.text-box {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.viewer .btn {
+  padding: 0.6rem 1.2rem;
+  background: rgb(55, 95, 187);
+  color: white;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.viewer .btn:hover {
+  background-color: rgb(120, 182, 26);
+  color: white;
+}
+
+
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: rgb(118, 112, 112);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 20px 0 0;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.Dname ol li {
+  font-size: 50px;
+
+  font-family: "Times New Roman", Times, serif;
+  color: #100707;
+  font-weight: bold;
+
+}
+
+.Dname {
+  margin-left: 300px;
+  margin-right: 300px;
+
+
+}
+
+body {
+  font-family: "Devanagari", "Arial", sans-serif;
+  line-height: 1.6;
+
+  padding: 30px;
+  color: #333;
+}
+
+h1 {
+  color: #5e2500;
+  font-size: 24px;
+  text-align: center;
+
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.sublist {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.amount {
+  font-weight: bold;
+  color: #264d2b;
+}
+
+body {
+  font-family: 'Devanagari', 'Arial', sans-serif;
+
+  color: #333;
+  /* padding: 40px; */
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+
+  padding: 30px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+h1 {
+  text-align: center;
+  color: #5e2500;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.donor-name {
+  font-weight: bold;
+  color: #5e2500;
+  font-size: 25px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.modal:active {
+  display: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.container-doner {
+  max-width: 800px;
+
+  padding: 30px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-left: 150px;
+}
+
+
+.jain-flag-title {
+  position: relative;
+  z-index: -1;
+  color: rgb(73, 11, 11);
+  padding: 40px;
+  font-size: 1.0rem;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 90%;
+  margin: 0 auto 30px auto;
+  font-weight: bold;
+  overflow: hidden;
+  background: none; /* remove background here */
+
+}
+
+.main-title{
+  font-size: 1.5rem;
+}
+
+.jain-flag-title::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../images/jain-flag2.jpg'); /* your flag image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* adjust blur intensity */
+  z-index: -1;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+
+.pic_btn {
+  padding: 9px 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  background: rgba(92, 92, 92, 0.4); /* semi-transparent black */
+  backdrop-filter: blur(6px); /* glass effect over blurred bg */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+}
+
+.pic_btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #f9f9f9;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 968px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 11;
+    border-radius: 15px;
+  }
+
+  .mainlogo img,
+  .main-logo img {
+    height: 100px;
+    margin-top: 0%;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: rgb(10, 187, 187);
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 15px;
+  }
+
+  .nav-links.active {
+    max-height: 1000px; /* enough to show full menu */
+    overflow: visible;
+    border: 2px solid #ffffff;
+  }
+
+  .nav-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* 🔽 MOBILE DROPDOWN FIXES */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(10, 187, 187);
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 0;
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+  .intro-video-section video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    height: 2px;
+    
+  }
+  .intro-video-section {
+    margin-top: 0px;
+  }
+
+  .main-title {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+
+  .jain-flag-title {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+    text-align: center;
+    width: 90%;
+    margin-top: 2px;
+  }
+
+
+
+
+
+
+
+  .guest-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .guest-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .guest-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    height: 80px;
+  }
+  
+
+  .overlay h3 {
+    font-size: 0.9rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .pic_btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+
+
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .other-links ul li a {
+    font-size: 15px;
+  }
+
+  .contact-details i {
+    font-size: 12px;
+    margin: 0;
+    gap: 0;
+  }
+  .contact-details a{
+    margin: 0;
+  } 
+  .contact-details p {
+    gap: 0;
+    row-gap: 0;
+  }
+
+
+  .contact-details,
+  .other-links,
+  .viewer {
+    width: 100%;
+    font-size: 5px;
+  }
+
+  .contact-details a,
+  .other-links a {
+    font-size: 2px;
+    font-weight: 200;
+  }
+
+  .text-box {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 2px;
+    /* padding: 10px 20px; */
+  }
+
+  .other-links ul {
+    padding: 0;
+    font-size: 2px;
+  }
+
+  .other-links ul li {
+    list-style: none;
+    padding: 0px 0;
+    font-size: 2px;
+    margin: 0;
+  }
+
+  .other-links h5 {
+    font-size: 18px;
+    color: #b30000;
+    margin: 0;
+  }
+
+  .viewer p {
+    font-size: 18px;
+  }
+
+  .feedback {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .container-doner {
+    margin-left: 1px;
+  }
+
+  
+  .jain-flag-title {
+    font-size: 18px;
+}
+.jain-flag-title .main-title {
+    font-size: 22px;
+}
+.intro-video-section iframe {
+    height: 170px;
+}     
+}
