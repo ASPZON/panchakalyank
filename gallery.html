@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/site.css">
+
+  <style>
+    
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      /* Horizontal rectangle */
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 10000;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .gallery-container {
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .gallery-container img {
+        border-radius: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="mainlogo">
+      <img src="images/main-logo.jpeg" alt="">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="Trial.html">Home</a></li>
+      <li><a href="entery-of-aacharyashree.html">Entry of Aacharyashree</a></li>
+
+      <li class="dropdown">
+        <a href="#">Day 1 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day1-morgning.html">Morning Session</a></li>
+          <li><a href="day1-afternon.html">Pravchan</a></li>
+          <li><a href="day1-night.html">Sangit Aarti</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Day 2 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day2-morgning.html">Morning Session</a></li>
+          <li><a href="day2-afternon.html">Pravchan</a></li>
+          <li><a href="day2-night.html">Sangit Aarti</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Day 3 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day3-morgning.html">Morning Session</a></li>
+          <li><a href="day3-afternon.html">Pravchan</a></li>
+          <li><a href="day3-night.html">Sangit Aarti</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Day 4 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day4-morgning.html">Morning Session</a></li>
+          <li><a href="4thday afternoon.html">Pravchan</a></li>
+          <li><a href="4th day day night.html">Sangit Aarti</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Day 5 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day5 morgning.html">Morning Session</a></li>
+          <li><a href="day5-afternoon.html">Pravchan</a></li>
+          <li><a href="day5 rathosthav.html">Sangit Aarti</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Day 6 ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="day6 morgning.html">Morning Session</a></li>
+          <!-- <li><a href="#">Pravchan</a></li>
+                <li><a href="#">Sangit Aarti</a></li> -->
+        </ul>
+      </li>
+    </ul>
+    <div class="main-logo">
+      <img src="images/cps2.jpg" alt="">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+
+
+  <h1>Gallery</h1>
+
+  <div class="gallery-container">
+    <img src="images/day1.1.jpg" alt="Photo 21">
+    <img src="images/murti1.1.jpg" alt="Photo 01">
+    <img src="images/murti1.2.jpg" alt="Photo 02">
+    <img src="images/murti1.3.jpg" alt="Photo 03">
+    <img src="images/murti1.4.jpg" alt="Photo 04">
+    <img src="images/murti1.5.jpg" alt="Photo 05">
+    <img src="images/murti1.6.jpg" alt="Photo 06">
+    <img src="images/murti1.7.jpg" alt="Photo 07">
+    <img src="images/ek1.jpg" alt="Photo 1">
+    <img src="images/ek2.jpg" alt="Photo 2">
+    <img src="images/ek3.jpg" alt="Photo 3">
+    <img src="images/ek4.jpg" alt="Photo 4">
+    <img src="images/ek5.jpg" alt="Photo 5">
+    <img src="images/ek6.jpg" alt="Photo 6">
+    <img src="images/ek7.jpg" alt="Photo 7">
+    <img src="images/ek8.jpg" alt="Photo 8">
+    <img src="images/ek9.jpg" alt="Photo 9">
+    <img src="images/ek10.jpg" alt="Photo 10">
+    <img src="images/ek11.jpg" alt="Photo 11">
+    <img src="images/ek12.jpg" alt="Photo 12">
+    <img src="images/ek13.jpg" alt="Photo 13">
+    <img src="images/ek14.jpg" alt="Photo 14">
+    <img src="images/ek15.jpg" alt="Photo 15">
+    <img src="images/ek16.jpg" alt="Photo 16">
+    <img src="images/ek17.jpg" alt="Photo 17">
+    <img src="images/ek18.jpg" alt="Photo 18">
+    <img src="images/ek19.jpg" alt="Photo 19">
+    <img src="images/ek20.jpg" alt="Photo 20">
+    <img src="images/day1.2.jpg" alt="Photo 22">
+    <img src="images/day1.3.jpg" alt="Photo 23">
+    <img src="images/day1.4.jpg" alt="Photo 24">
+    <img src="images/day1.5.jpg" alt="Photo 25">
+    <img src="images/day1.6.jpg" alt="Photo 26">
+    <img src="images/day1.7.jpg" alt="Photo 27">
+    <img src="images/day1.9.jpg" alt="Photo 29">
+    <img src="images/day1.10.jpg" alt="Photo 30">
+    <img src="images/day1.11.jpg" alt="Photo 31">
+    <img src="images/day1.12.jpg" alt="Photo 32">
+    <img src="images/day4.1.jpg" alt="Photo 33">
+    <img src="images/day4.2.jpg" alt="Photo 34">
+    <img src="images/day4.3.jpg" alt="Photo 35">
+    <img src="images/ja1.1.jpg" alt="Photo 36">
+    <img src="images/ja1.2.jpg" alt="Photo 37">
+    <img src="images/swamiji1.1.jpg" alt="Photo 38">
+    <img src="images/swamiji1.2.jpg" alt="Photo 39">
+    <img src="images/swamiji1.3.jpg" alt="Photo 40">
+    <img src="images/swamiji1.4.jpg" alt="Photo 41">
+    <img src="images/swamiji1.4.jpg" alt="Photo 42">
+    <img src="images/swamiji1.5.jpg" alt="Photo 43">
+    <img src="images/swamiji1.6.jpg" alt="Photo 44">
+    <img src="images/swamiji1.7.jpg" alt="Photo 45">
+    <img src="images/swamiji1.8.jpg" alt="Photo 46">
+    <img src="images/saheb1.1.jpg" alt="Photo 47">
+    <img src="images/saheb1.2.jpg" alt="Photo 48">
+    <img src="images/saheb1.3.jpg" alt="Photo 49">
+    <img src="images/saheb1.4.jpg" alt="Photo 50">
+    <img src="images/saheb1.5.jpg" alt="Photo 51">
+    <img src="images/saheb1.6.jpg" alt="Photo 52">
+    <img src="images/saheb1.7.jpg" alt="Photo 53">
+    <img src="images/day5.6.jpg" alt="Photo 90">
+    <img src="images/saheb1.8.jpg" alt="Photo 54">
+    <img src="images/saheb1.9.jpg" alt="Photo 55">
+    <img src="images/saheb2.1.jpg" alt="Photo 56">
+    <img src="images/saheb2.2.jpg" alt="Photo 57">
+    <img src="images/saheb2.3.jpg" alt="Photo 58">
+    <img src="images/saheb2.4.jpg" alt="Photo 59">
+    <img src="images/saheb2.4.jpg" alt="Photo 60">
+    <img src="images/saheb2.5.jpg" alt="Photo 61">
+    <img src="images/saheb2.6.jpg" alt="Photo 62">
+    <img src="images/saheb2.7.jpg" alt="Photo 63">
+    <img src="images/saheb2.8.jpg" alt="Photo 64">
+    <img src="images/saheb2.9.jpg" alt="Photo 65">
+    <img src="images/saheb3.1.jpg" alt="Photo 66">
+    <img src="images/saheb3.2.jpg" alt="Photo 67">
+    <img src="images/saheb3.3.jpg" alt="Photo 68">
+    <img src="images/ullas1.1.jpg" alt="Photo 69">
+    <img src="images/ullas1.2.jpg" alt="Photo 70">
+    <img src="images/ullas1.3.jpg" alt="Photo 71">
+    <img src="images/uttam1.1.jpg" alt="Photo 72">
+    <img src="images/vinod godavat1.1.jpg" alt="Photo 73">
+    <img src="images/yad sangu1.1.jpg" alt="Photo 74">
+    <img src="images/yad sangu1.2.jpg" alt="Photo 75">
+    <img src="images/yad sangu1.3.jpg" alt="Photo 76">
+    <img src="images/yad sangu1.4.jpg" alt="Photo 76">
+    <img src="images/yad sangu1.5.jpg" alt="Photo 77">
+    <img src="images/yad sangu1.6.jpg" alt="Photo 78">
+    <img src="images/yad sangu1.7.jpg" alt="Photo 79">
+    <img src="images/yad sangu1.8.jpg" alt="Photo 80">
+    <img src="images/PL001300.JPG" alt="Photo 81">
+    <img src="images/PL007312.JPG" alt="Photo 82">
+    <img src="images/PL009927.JPG" alt="Photo 83">
+    <img src="images/day5.1.jpg" alt="Photo 84">
+    <img src="images/day5.2.jpg" alt="Photo 85">
+    <img src="images/day5.3.jpg" alt="Photo 86">
+    <img src="images/day5.4.jpg" alt="Photo 87">
+    <img src="images/day5.4.jpg" alt="Photo 88">
+    <img src="images/day5.9.jpg" alt="Photo 93">
+    <img src="images/day5.5.jpg" alt="Photo 89">
+    <img src="images/day5.7.jpg" alt="Photo 91">
+    <img src="images/day5.8.jpg" alt="Photo 92">
+
+
+
+
+  </div>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <span class="modal-close" id="closeBtn">&times;</span>
+    <img id="modalImg" src="">
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
+    const images = document.querySelectorAll(".gallery-container img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close modal if clicking outside the image
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+
+      // Close all day dropdowns when hamburger closes
+      if (!document.querySelector('.nav-links').classList.contains('active')) {
+        document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('open'));
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownLinks = document.querySelectorAll('.dropdown > a');
+
+      dropdownLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault(); // Prevent jump
+            const clickedDropdown = this.parentElement;
+
+            const isAlreadyOpen = clickedDropdown.classList.contains('open');
+
+            // Close all dropdowns
+            document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('open'));
+
+            // Reopen if it wasn't already open
+            if (!isAlreadyOpen) {
+              clickedDropdown.classList.add('open');
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
